@@ -1,0 +1,76 @@
+body {
+    font-family: 'SF Pro Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #1C1C1E;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    margin: 20px;
+}
+
+.password {
+    border: 1px solid #C7C7CC;
+    border-radius: 8px;
+    margin: auto;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+#passwordDisplay {
+    font-size: 24px;
+    margin-bottom: 20px;
+    user-select: all;
+    -webkit-user-select: all;
+    -moz-user-select: all;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    border: 1px solid #C7C7CC;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    width: 50px;
+}
+
+button {
+    background-color: #007AFF;
+    border: none;
+    border-radius: 8px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0A84FF;
+}
+
+button:disabled {
+    background-color: #C7C7CC;
+    cursor: not-allowed;
+}
+
+footer {
+    background-color: #E5E5EA;
+    color: #8E8E93;
+    padding: 20px;
+    text-align: center;
+}

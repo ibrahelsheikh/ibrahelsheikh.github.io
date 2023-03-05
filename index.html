@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h1>Random Password Generator</h1>
+</header>
+<main>
+    <div class="password">
+        <p id="passwordDisplay">Click the button below to generate a password</p>
+        <label for="lengthInput">Password length:</label>
+        <input type="number" id="lengthInput" min="6" max="32" value="12">
+        <button id="generateButton" onclick="generatePassword()">Generate Password</button>
+        <button id="copyButton" onclick="copyPassword()" disabled>Copy</button>
+    </div>
+</main>
+<footer>
+    <p>Created by ChatGPT</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
