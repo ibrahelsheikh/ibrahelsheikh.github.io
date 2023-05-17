@@ -25,6 +25,15 @@ function generatePassword() {
     // enable copy button
     const copyButton = document.getElementById('copyButton');
     copyButton.disabled = false;
+
+    // store generated password and time
+    const passwordHistory = JSON.parse(localStorage.getItem('passwordHistory')) || [];
+    const passwordRecord = {
+        password: password,
+        time: new Date().toLocaleString()
+    };
+    passwordHistory.push(passwordRecord);
+    localStorage.setItem('passwordHistory', JSON.stringify(passwordHistory));
 }
 
 function copyPassword() {
@@ -50,3 +59,7 @@ function copyPassword() {
     // show confirmation message
     alert('Password copied to clipboard!');
 }
+
+// Example usage to retrieve password history
+const passwordHistory = JSON.parse(localStorage.getItem('passwordHistory'));
+console.log(passwordHistory);
