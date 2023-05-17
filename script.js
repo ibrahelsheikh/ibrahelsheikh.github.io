@@ -1,3 +1,5 @@
+let passwordHistory = [];
+
 function generatePassword() {
     // define possible characters for password
     const lowercaseLetters = 'abcdefghijklmnopqrstuvwxyz';
@@ -26,14 +28,12 @@ function generatePassword() {
     const copyButton = document.getElementById('copyButton');
     copyButton.disabled = false;
 
-    // store generated password and time
-    const passwordHistory = JSON.parse(localStorage.getItem('passwordHistory')) || [];
-    const passwordRecord = {
-        password: password,
-        time: new Date().toLocaleString()
+    // store generated password and its timestamp
+    const generatedPassword = {
+        password,
+        timestamp: new Date().toISOString()
     };
-    passwordHistory.push(passwordRecord);
-    localStorage.setItem('passwordHistory', JSON.stringify(passwordHistory));
+    passwordHistory.push(generatedPassword);
 }
 
 function copyPassword() {
@@ -56,10 +56,24 @@ function copyPassword() {
     // remove temporary textarea
     document.body.removeChild(textarea);
 
+    // save password history to JSON file
+    const passwordHistoryJSON = JSON.stringify(passwordHistory, null, 2);
+    const blob = new Blob([passwordHistoryJSON], { type: 'application/json' });
+    const filename = 'password_history.json';
+
+    if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        // For IE browser
+        window.navigator.msSaveOrOpenBlob(blob, filename);
+    } else {
+        // For other browsers
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        link.click();
+        URL.revokeObjectURL(url);
+    }
+
     // show confirmation message
     alert('Password copied to clipboard!');
 }
-
-// Example usage to retrieve password history
-const passwordHistory = JSON.parse(localStorage.getItem('passwordHistory'));
-console.log(passwordHistory);
