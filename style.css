@@ -34,6 +34,12 @@ main {
     -moz-user-select: all;
 }
 
+.message {
+    color: #007AFF;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 label {
     display: block;
     margin-bottom: 10px;
