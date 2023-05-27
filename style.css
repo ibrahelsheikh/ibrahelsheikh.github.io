@@ -90,3 +90,45 @@ footer {
     padding: 20px;
     text-align: center;
 }
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    main {
+        margin: 10px;
+    }
+
+    .password {
+        max-width: 400px;
+        padding: 15px;
+    }
+
+    #lengthInput {
+        width: 40px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .password {
+        max-width: 300px;
+        padding: 10px;
+    }
+
+    #lengthInput {
+        width: 30px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
