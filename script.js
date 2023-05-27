@@ -46,7 +46,4 @@ function copyPassword() {
 
     // remove temporary textarea
     document.body.removeChild(textarea);
-
-    // show confirmation message
-    alert('Password copied to clipboard!');
 }
