@@ -25,6 +25,10 @@ function generatePassword() {
     // enable copy button
     const copyButton = document.getElementById('copyButton');
     copyButton.disabled = false;
+
+    // show pop-up message
+    const copyMessage = document.getElementById('copyMessage');
+    copyMessage.innerText = "Password generated!";
 }
 
 function copyPassword() {
@@ -46,4 +50,8 @@ function copyPassword() {
 
     // remove temporary textarea
     document.body.removeChild(textarea);
+
+    // show pop-up message
+    const copyMessage = document.getElementById('copyMessage');
+    copyMessage.innerText = "Password copied to clipboard!";
 }
