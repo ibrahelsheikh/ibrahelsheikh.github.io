@@ -28,7 +28,13 @@ function generatePassword() {
 
     // show pop-up message
     const copyMessage = document.getElementById('copyMessage');
-    copyMessage.innerText = "Password generated!";
+    copyMessage.innerText = 'Password generated!';
+    copyMessage.style.display = 'block';
+
+    // hide pop-up message after 2 seconds
+    setTimeout(function() {
+        copyMessage.style.display = 'none';
+    }, 2000);
 }
 
 function copyPassword() {
@@ -53,5 +59,11 @@ function copyPassword() {
 
     // show pop-up message
     const copyMessage = document.getElementById('copyMessage');
-    copyMessage.innerText = "Password copied to clipboard!";
+    copyMessage.innerText = 'Password copied to clipboard!';
+    copyMessage.style.display = 'block';
+
+    // hide pop-up message after 2 seconds
+    setTimeout(function() {
+        copyMessage.style.display = 'none';
+    }, 2000);
 }
