@@ -26,15 +26,6 @@ function generatePassword() {
     const copyButton = document.getElementById('copyButton');
     copyButton.disabled = false;
 
-    // show pop-up message
-    const copyMessage = document.getElementById('copyMessage');
-    copyMessage.innerText = 'Password generated!';
-    copyMessage.style.display = 'block';
-
-    // hide pop-up message after 2 seconds
-    setTimeout(function() {
-        copyMessage.style.display = 'none';
-    }, 2000);
 }
 
 function copyPassword() {
