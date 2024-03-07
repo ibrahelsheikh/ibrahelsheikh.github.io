@@ -1,147 +1,125 @@
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    font-family: 'SF Pro Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    box-sizing: border-box;
 }
 
-.container {
-    flex: 1;
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    background-color: #111;
+    color: white;
+    padding: 20px 50px;
+}
+
+.navTop {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header {
-    background-color: #1C1C1E;
-    color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
-}
-
-main {
-    flex: 1;
-    margin: 20px;
-}
-
-.password {
-    border: 1px solid #C7C7CC;
-    border-radius: 8px;
-    margin: auto;
-    max-width: 500px;
-    padding: 20px;
-    text-align: center;
-}
-
-#passwordDisplay {
-    font-size: 24px;
-    margin-bottom: 20px;
-    user-select: all;
-    -webkit-user-select: all;
-    -moz-user-select: all;
-}
-
-.message {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    z-index: 9999;
-}
-
-.show-message {
-    display: block;
-}
-
-
-label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input[type="number"] {
-    border: 1px solid #C7C7CC;
-    border-radius: 8px;
-    font-size: 16px;
+#search-box {
+    min-width: 500px;
+    background-color: white;
     padding: 10px;
-    text-align: center;
-    width: 50px;
+    border-radius: 200px;
+    display: flex;
 }
 
-button {
-    background-color: #007AFF;
+.search-input {
     border: none;
-    border-radius: 8px;
-    color: #FFFFFF;
+    outline: none;
+    background-color: transparent;
+    flex-grow: 1;
+}
+
+.search-input::placeholder {
+    color: lightgray;
+}
+
+#search-icon {
+    color: #111;
     cursor: pointer;
-    font-size: 20px;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
+    padding-right: 10px;
 }
 
-button:hover {
-    background-color: #0A84FF;
+#shopping-cart-icon {
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
-button:disabled {
-    background-color: #C7C7CC;
-    cursor: not-allowed;
+.navBottom {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-footer {
-    background-color: #E5E5EA;
-    color: #8E8E93;
-    padding: 20px;
-    text-align: center;
+.menuItem {
+    color: lightgray;
+    cursor: pointer;
+    
+    font-weight: 400;
+    transition: all 0.5s ease-in-out;
 }
 
-/* Responsive Styles */
-
-@media (max-width: 768px) {
-    main {
-        margin: 10px;
-    }
-
-    .password {
-        max-width: 400px;
-        padding: 15px;
-    }
-
-    #lengthInput {
-        width: 40px;
-    }
-
-    button {
-        font-size: 18px;
-        padding: 8px 16px;
-    }
+#slider {
+    background: url('imgs/background.png');
+    overflow: hidden;
 }
 
-@media (max-width: 480px) {
-    header {
-        padding: 10px;
-    }
+.sliderWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1s ease-in-out;
+}
 
-    .password {
-        max-width: 250px; /* تم تقليل العرض إلى 250 بكسل */
-        padding: 10px;
-    }
+.sliderItem {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
-    #lengthInput {
-        width: 30px;
-    }
+.slideBg {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    color: white;
+    position: absolute;
+}
 
-    button {
-        font-size: 16px;
-        padding: 6px 12px;
-    }
+.sliderImg {
+    z-index: 1;
+}
+
+.sliderItem:nth-child(1) .slideBg {
+    background-color: white;
+}
+
+.sliderItem:nth-child(2) .slideBg {
+    background-color: teal;
+}
+
+.sliderItem:nth-child(3) .slideBg {
+    background-color: rebeccapurple;
+}
+
+.sliderItem:nth-child(4) .slideBg {
+    background-color: cornflowerblue;
+}
+
+.sliderItem:nth-child(5) .slideBg {
+    background-color: burlywood;
+}
+
+.selectedItem {
+    color: rgb(150, 50, 50);
+    font-weight: 900;
 }
