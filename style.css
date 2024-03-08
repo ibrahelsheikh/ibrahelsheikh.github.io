@@ -11,7 +11,7 @@ body {
 }
 
 nav {
-    background-color: #111;
+    background-color: rgba(255, 255, 255, 0.9);
     color: white;
     padding: 20px 50px;
 }
@@ -28,6 +28,7 @@ nav {
     padding: 10px;
     border-radius: 200px;
     display: flex;
+
 }
 
 .search-input {
@@ -63,7 +64,7 @@ nav {
 .menuItem {
     color: lightgray;
     cursor: pointer;
-    
+
     font-weight: 400;
     transition: all 0.5s ease-in-out;
 }
@@ -97,27 +98,9 @@ nav {
 
 .sliderImg {
     z-index: 1;
+    width: 50vw;
 }
 
-.sliderItem:nth-child(1) .slideBg {
-    background-color: white;
-}
-
-.sliderItem:nth-child(2) .slideBg {
-    background-color: teal;
-}
-
-.sliderItem:nth-child(3) .slideBg {
-    background-color: rebeccapurple;
-}
-
-.sliderItem:nth-child(4) .slideBg {
-    background-color: cornflowerblue;
-}
-
-.sliderItem:nth-child(5) .slideBg {
-    background-color: burlywood;
-}
 
 .selectedItem {
     color: rgb(150, 50, 50);
