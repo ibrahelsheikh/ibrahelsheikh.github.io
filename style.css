@@ -28,6 +28,7 @@ nav {
     padding: 10px;
     border-radius: 200px;
     display: flex;
+    outline: #565656;
 
 }
 
@@ -106,3 +107,36 @@ nav {
     color: rgb(150, 50, 50);
     font-weight: 900;
 }
+
+.footer {
+    width: 50%;
+    text-align: center;
+    height: 10vw;
+    margin: auto;
+    padding-top: 20px;
+    display: grid;
+    gap: 1VW;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.footer::before {
+    content: "";
+    width: 100%;
+    border-top: 0.063rem solid #c7c7c7;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+}
+
+.footerItem {
+    margin: auto;
+    cursor: pointer;
+}
+
+.footerItem:hover {
+    color: rgb(0, 86, 157);
+    transition: 0.1s ease-in;
+}
+
